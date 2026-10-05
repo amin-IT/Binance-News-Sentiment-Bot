@@ -57,7 +57,7 @@ def test_load_feeds_skips_header_bom_and_duplicates(tmp_path):
 
 def test_repository_feeds_file_loads():
     feeds = bot.load_feeds(Path(__file__).resolve().parents[1] / bot.FEEDS_FILE)
-    assert len(feeds) > 50
+    assert len(feeds) >= 15
     assert all(f.startswith('http') for f in feeds)
 
 

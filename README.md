@@ -1,7 +1,8 @@
 # Binance News Sentiment Bot
 
 A Binance trading bot that buys and sells cryptocurrency based on the sentiment of
-recent news headlines from ~100 crypto news sites.
+recent news headlines from the major crypto news outlets
+(CoinDesk, Cointelegraph, Decrypt, The Block, Blockworks, Bitcoin Magazine and more).
 
 > **Warning:** this is an experimental bot. News sentiment is a weak trading signal.
 > Start on the testnet or with `--dry-run`, and only trade money you can afford to lose.
@@ -84,7 +85,8 @@ Edit the block marked `USER INPUT VARIABLES` at the top of `news_analysis.py`:
 | `HOURS_PAST` | `24` | Maximum headline age in hours. |
 
 To follow other news sites, add their RSS feed URLs to `Crypto feeds.csv`
-(one per line). Feeds that are down or invalid are skipped automatically; run with
+(one per line). The list favours established newsrooms over blogs and exchange
+marketing pages, since low-quality sites add noise to the sentiment. Feeds that are down or invalid are skipped automatically; run with
 `-v` to see which ones fail.
 
 ## Running the tests
