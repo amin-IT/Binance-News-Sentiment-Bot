@@ -1,2 +1,10 @@
 __pycache__
 *.pyc
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# bot state: coins currently held
+*coins_in_hand.json
+*coins_in_hand.json.tmp
